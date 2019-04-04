@@ -1,0 +1,31 @@
+{
+  "name": "unique-integer",
+  "version": "1.0.0",
+  "description": "Generate a unique integer",
+  "keywords": "integer, id, number, unique, generator",
+  "main": "lib/index.js",
+  "scripts": {
+    "documentation": "./node_modules/jsdoc-to-markdown/bin/cli.js ./src/index.js > README.md",
+    "prepare": "./node_modules/@babel/cli/bin/babel.js src --out-dir lib",
+    "test": "./node_modules/.bin/standard && ./node_modules/.bin/jest"
+  },
+  "author": "Trolleymusic",
+  "repository": "github:Trolleymusic/unique-integer",
+  "license": "ISC",
+  "jest": {
+    "testEnvironment": "node",
+    "modulePaths": ["./src/*.test.js"],
+    "verbose": true
+  },
+  "dependencies": {
+    "crc-32": "^1.2.0",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "jest": "^24.7.1",
+    "standard": "^12.0.1"
+  }
+}
